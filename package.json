@@ -1,0 +1,15 @@
+{
+  "name": "custom-bot",
+  "version": "1.0.0",
+  "description": "Discord Bot using Canvas LMS API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "deploy_commands": "node deploy-commands.js"
+  },
+  "author": "Davey Blake",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.16.2"
+  }
+}
