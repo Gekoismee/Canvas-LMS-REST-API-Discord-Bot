@@ -2,5 +2,6 @@
     "token": "insert Discord bot token here",
     "clientId": "insert Discord bot clientId here",
     "guildId": "insert Discord guildId here",
-    "canvasToken": "insert Canvas LMS authorization token here"
+    "canvasToken": "insert Canvas LMS authorization token here",
+    "canvasBaseUrl": "insert base Canvas url here"
 }

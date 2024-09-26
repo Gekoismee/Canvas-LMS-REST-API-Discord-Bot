@@ -1,7 +1,7 @@
-const { canvasToken } = require('./config.json');
+const { canvasToken, canvasBaseUrl } = require('./config.json');
 
   async function getCourses(){
-    let response = await fetch('https://harding.instructure.com/api/v1/courses?include[]=term&enrollment_state=active',{
+    let response = await fetch('https://'+canvasBaseUrl+'/api/v1/courses?include[]=term&enrollment_state=active',{
       method: 'GET',
       mode: 'cors',
       headers:{
@@ -22,7 +22,7 @@ const { canvasToken } = require('./config.json');
   }
 
   async function getAssignments(courseID,bucket){
-    let response = await fetch('https://harding.instructure.com/api/v1/courses/'+courseID+'/assignments?bucket='+bucket,{
+    let response = await fetch('https://'+canvasBaseUrl+'/api/v1/courses/'+courseID+'/assignments?bucket='+bucket,{
       method: 'GET',
       mode: 'cors',
       headers:{
@@ -43,7 +43,7 @@ const { canvasToken } = require('./config.json');
   }
 
   async function getAssignments(courseID){
-    let response = await fetch('https://harding.instructure.com/api/v1/courses/'+courseID+'/assignments',{
+    let response = await fetch('https://'+canvasBaseUrl+'/api/v1/courses/'+courseID+'/assignments',{
       method: 'GET',
       mode: 'cors',
       headers:{
@@ -64,7 +64,7 @@ const { canvasToken } = require('./config.json');
   }
 
   async function getAssignment(courseID, assignmentID){
-    let response = await fetch('https://harding.instructure.com/api/v1/courses/'+courseID+'/assignments/'+assignmentID,{
+    let response = await fetch('https://'+canvasBaseUrl+'/api/v1/courses/'+courseID+'/assignments/'+assignmentID,{
       method: 'GET',
       mode: 'cors',
       headers:{
